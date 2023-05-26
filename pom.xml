@@ -46,13 +46,13 @@
   <version>3.1.0</version>
   <executions>
     <execution>
-        <id>execute-Flip_1</id>
+        <id>execute-Alert_Handle</id>
       <phase>test</phase>
       <goals>
         <goal>java</goal>
       </goals>
       <configuration>
-        <mainClass>Practice.Flip_1</mainClass>
+        <mainClass>section_2.Alert_Handle</mainClass>
       </configuration>
     </execution>
   </executions>
