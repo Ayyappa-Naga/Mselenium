@@ -39,24 +39,27 @@
   </dependencies>
 	<build>
  <plugins>
+    
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>3.0.0</version>
-        <executions>
-          <execution>
-            <id>exec-my-main-class</id>
-            <phase>test</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-            <configuration>
-              <mainClass>Practice.Flip_1</mainClass>
-            </configuration>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
       </plugin>
-  
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <includes>
+            <include>**/Flip_1.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+    
     
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
