@@ -38,27 +38,25 @@
 
   </dependencies>
 	<build>
-  <plugins>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>exec-maven-plugin</artifactId>
-      <version>3.0.0</version>
-      <configuration>
-        <mainClass>Practice.Flip_1</mainClass>
-      </configuration>
-    </plugin>
-  </plugins>
-
-  <plugins>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>exec-maven-plugin</artifactId>
-      <version>3.0.0</version>
-      <configuration>
-        <mainClass>com.example.YourMainClass</mainClass>
-      </configuration>
-    </plugin>
-  </plugins>
+ <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>exec-my-main-class</id>
+            <phase>test</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <mainClass>Practice.Flip_1</mainClass>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
 
 	  
 	  
